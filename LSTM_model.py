@@ -20,7 +20,7 @@ class LSTMModel:
         
         return np.array(X), np.array(y)
     
-    def create_simple_lstm(self, input_shape):
+    def create_lstm(self, input_shape):
         """Creating a LSTM model"""
         import tensorflow as tf
         from tensorflow.keras.models import Sequential
@@ -56,7 +56,7 @@ class LSTMModel:
             X_test = X_test.reshape((X_test.shape[0], X_test.shape[1], 1))
             
             # Create and train model
-            model = self.create_simple_lstm((X_train.shape[1], 1))
+            model = self.create_lstm((X_train.shape[1], 1))
             
             # Simple training
             history = model.fit(

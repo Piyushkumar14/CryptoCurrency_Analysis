@@ -15,7 +15,6 @@ class VolatilityAnalyzer:
             'monthly_volatility': returns.std() * np.sqrt(30),
             'annual_volatility': returns.std() * np.sqrt(365),
             
-            # Extreme moves
             'max_daily_gain': returns.max(),
             'max_daily_loss': returns.min(),
             'avg_daily_move': returns.abs().mean(),

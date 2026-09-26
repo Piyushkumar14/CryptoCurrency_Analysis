@@ -64,6 +64,8 @@ class CryptoAnalysisApp:
         
         # Main content
         self.render_main_content()
+
+        #render quickstats
     
     def render_sidebar(self):
         """Render sidebar controls"""
@@ -91,7 +93,7 @@ class CryptoAnalysisApp:
             # Time period
             self.period = st.selectbox(
                 "Time Period",
-                ['1mo', '3mo', '6mo', '1y', '2y'],
+                ['1mo', '3mo', '6mo', '1y', '2y','5y', '10y'],
                 index=3
             )
             

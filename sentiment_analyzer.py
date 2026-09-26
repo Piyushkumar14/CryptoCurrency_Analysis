@@ -23,7 +23,7 @@ class SentimentAnalyzer:
         # TextBlob sentiment
         analysis = TextBlob(text)
         polarity = analysis.sentiment.polarity
-        subjectivity = analysis.sentiment.subjectivity
+        subjectivity = analysis.sentiment.subjectivity  
         
         # Custom word-based analysis
         text_lower = text.lower()
